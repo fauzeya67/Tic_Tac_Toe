@@ -107,10 +107,13 @@ cd Tic_Tac_Toe
 3. Run container:
    ```bash
    docker run -d -p 5173:5173 --name tic-tac-toe tic-tac-toe-app
+   and
+   docker run -d -p 8000:80 --name tic-tac-toe tic-tac-toe-app
    ```
 
 👉 Open in browser:  
 `http://<EC2-Public-IP>:5173`
+`http://<EC2-Public-IP>:8000`
 
 ---
 
@@ -182,9 +185,11 @@ pipeline {
 ```
 
 ---
-
+ ```
    sudo usermod -aG docker jenkins
    sudo systemctl restart jenkins
+ ```
+   
 
 ## 🔔 7. Configure GitHub Webhook
 
@@ -209,6 +214,7 @@ Now, every push to GitHub will trigger Jenkins automatically.
 
 👉 App URL:  
 `http://<EC2-Public-IP>:5173`
+`http://<EC2-Public-IP>:8000`
 
 ---
 
