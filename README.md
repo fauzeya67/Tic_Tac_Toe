@@ -133,8 +133,7 @@ cd Tic_Tac_Toe
    sudo systemctl enable jenkins
    sudo systemctl start jenkins
    sudo systemctl status jenkins
-   sudo usermod -aG docker jenkins
-   sudo systemctl restart jenkins
+
    ```
 
 3. Get Jenkins password:
@@ -183,6 +182,9 @@ pipeline {
 ```
 
 ---
+
+   sudo usermod -aG docker jenkins
+   sudo systemctl restart jenkins
 
 ## 🔔 7. Configure GitHub Webhook
 
