@@ -130,7 +130,9 @@ cd Tic_Tac_Toe
 
 2. Install Docker for Jenkins:
    ```bash
-   sudo apt install -y docker.io
+   sudo systemctl enable jenkins
+   sudo systemctl start jenkins
+   sudo systemctl status jenkins
    sudo usermod -aG docker jenkins
    sudo systemctl restart jenkins
    ```
