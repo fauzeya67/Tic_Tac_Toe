@@ -68,7 +68,7 @@ export function TicTacToe() {
         transition={{ duration: 0.6, type: 'spring', stiffness: 100 }}
       >
         <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-2">
-          Tic Tac Toe by Fauzeya 
+          Tic Tac Toe by Fauzeya Naheed
         </h1>
         <p className="text-lg text-gray-600 dark:text-gray-300">
           Modern • Animated • Beautiful
