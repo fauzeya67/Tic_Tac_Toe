@@ -176,8 +176,8 @@ pipeline {
             steps {
                 sh "docker stop tic-tac-toe || true"
                 sh "docker rm tic-tac-toe || true"
-                sh "docker run -d -p 5173:5173 --name tic-tac-toe tic-tac-toe-app"
-                echo "🚀 App running on port 5173"
+                sh "docker run -d -p 8000:80 --name tic-tac-toe tic-tac-toe-app"
+                echo "🚀 App running on port 8000"
             }
         }
     }
@@ -192,6 +192,9 @@ pipeline {
    
 
 ## 🔔 7. Configure GitHub Webhook
+In Jenkins job → Configure → Build Triggers → Enable:
+ ✅ GitHub hook trigger for GitScm polling.
+Copy Jenkins webhook URL:http://<EC2-Public-IP>:8080/
 
 1. Go to your repo → **Settings → Webhooks → Add Webhook**  
 2. Enter Payload URL:  
@@ -202,7 +205,7 @@ pipeline {
 4. Select: **Just the push event**  
 5. Save ✅  
 
-Now, every push to GitHub will trigger Jenkins automatically.  
+Now, every push to GitHub will automatically trigger Jenkins.  
 
 ---
 
