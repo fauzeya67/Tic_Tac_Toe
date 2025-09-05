@@ -96,7 +96,7 @@ cd Tic_Tac_Toe
    ```bash
    sudo apt update
    sudo apt install -y docker.io
-   sudo usermod -aG docker ubuntu
+   sudo usermod -aG docker ubuntu && newgrp docker
    ```
 
 2. Build Docker image:
